@@ -35,6 +35,8 @@ while True:
       elif oper == 'd': 
         delLine = text.pop(lineNum)
         print 'del@' + str(lineNum) + ':' + delLine,
-      elif oper == 'w': text.insert(lineNum+1, content)
+      elif oper == 'w': text.insert(lineNum+1, content+'\n')
+      f.seek(0)
       if oper != 'r':
         for i in range(len(text)): f.write(text[i])
+        f.truncate()
