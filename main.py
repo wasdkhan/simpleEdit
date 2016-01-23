@@ -8,7 +8,7 @@ while True:
   command = raw_input('--> ')
   helpText = '''  'x' to exit
   'h' for help
-  'R' to read full text
+  'ra' to read all text
   'Operation;LineNumber;Content' to edit (args are seperated by semicolons) 
     'd' operation to delete line (needs Line#)
     'r' operation to read line (needs Line#)
@@ -19,7 +19,7 @@ while True:
     sys.exit("editing complete")
   elif command=='h' or command=='help':
     print helpText
-  elif command=='R':
+  elif command=='ra':
     f.seek(0)
     text = f.readlines()
     for i in range(len(text)):
