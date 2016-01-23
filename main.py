@@ -25,7 +25,7 @@ while True:
     for i in range(len(text)):
       print str(i) + ' ' + text[i],
   else:
-    pars = re.search('(\w);(\d+);*(.*)',command)
+    pars = re.search(r'(\w);(\d+);*(.*)',command)
     if pars:
       lineNum = int(pars.group(2))
       oper = pars.group(1)
