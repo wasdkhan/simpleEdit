@@ -2,6 +2,6 @@ A very simple text editor written in python, to run type in terminal:
 
 python main.py (name of txt file)
 
-type 'h' or 'help' to learn how to use it, 'english.txt' is included to play around, 
+type 'h' or 'help' to learn how to use it, 
 
 Only very basic functionality implemented. No bugs at the moment, looking to add new functionality.
