@@ -25,7 +25,7 @@ while True: #keep asking for input until exit
     for i in range(len(text)):
       print str(i) + ' ' + text[i],
   else:
-    pars = re.search(r'(\w);(\d+);*(.*)',command) #search for raw string of one letter,one or more digit,0 or more semicolon, 0 or more non-newline characters
+    pars = re.search(r'(\w);(\d+);?(.*)',command) #search for raw string of one letter,one or more digit,0 or 1 semicolon, 0 or more non-newline characters
     if pars:  #if command is proper (pars!=None/False)
       lineNum = int(pars.group(2))  #line no. to edit
       oper = pars.group(1)  #operation to do
