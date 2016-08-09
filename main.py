@@ -31,7 +31,9 @@ while True: #keep asking for input until exit
       oper = pars.group(1)  #operation to do
       content = pars.group(3) #what to write if there is content
       f.seek(0)
-      if oper == 'r': print text[lineNum], #read line ',' is added for no \n 
+      #make sure line number is in the text
+      if not(lineNum < len(text)) and len(text) != 0: print 'line number out of bounds, try again'
+      elif oper == 'r': print text[lineNum] #read line ',' is added for no \n 
       elif oper == 'd': 
         delLine = text.pop(lineNum) #delete line
         print 'del@' + str(lineNum) + ':' + delLine,  #show what is deleted
